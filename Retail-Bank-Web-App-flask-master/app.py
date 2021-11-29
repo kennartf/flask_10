@@ -57,8 +57,7 @@ def register():
         if usr and pwd and role:
             user=models.User.query.filter_by(username=usr).first()
             if(user==None):
-                user = models.User(username=usr,
-                                    role_id=role)
+                user = models.User(username=usr, role_id=role)
                 user.set_password(pwd)
                 # add employee to the database
                 db.session.add(user)

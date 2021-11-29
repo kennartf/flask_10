@@ -5,7 +5,6 @@ from sqlalchemy import event
 from sqlalchemy import DDL
 
 
-
 class User(db.Model):
     """
     Create an User table
@@ -25,8 +24,6 @@ class User(db.Model):
     login = db.Column(db.TIMESTAMP, nullable=True)
 
 
-
-    
    
     def set_password(self, password):
         """
@@ -37,7 +34,7 @@ class User(db.Model):
     def verify_password(self, password):
         """
         Check if hashed password matches actual password
-        """
+         """
         return check_password_hash(self.password_hash, password)
 
 
@@ -95,7 +92,6 @@ class AccountStatus(db.Model):
     """
     Create a Account Status table
     """
-
     __tablename__ = 'account_status'
     
     id=db.Column(db.Integer,primary_key=True)
