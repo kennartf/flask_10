@@ -1,0 +1,19 @@
+Deploying an app on heroku
+
+
+if __name__ == "__main__":
+    db.create_all()
+    app.run(debug=False)
+
+* Create a Procfile to your project
+== web: gunicorn app:app
+
+
+*pip freeze requirements.txt
+
+*.gitignore.......this folders or file will not be deploy
+
+venv/
+__pycache__/
+
+
